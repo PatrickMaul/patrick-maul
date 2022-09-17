@@ -1,16 +1,17 @@
 <template lang="pug">
 .app
+  ApplicationBar
   main
     router-view
 </template>
 
 <script>
+import ApplicationBar from "./components/core/ApplicationBar.vue";
+
 export default {
   name: "App",
-  methods: {
-    test(x) {
-      return x + 1;
-    },
+  components: {
+    ApplicationBar,
   },
 };
 </script>
