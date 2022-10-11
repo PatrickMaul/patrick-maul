@@ -8,7 +8,7 @@
 export default {
   name: "MobileMenuButton",
   props: {
-    show: String,
+    show: Boolean,
   },
 };
 </script>

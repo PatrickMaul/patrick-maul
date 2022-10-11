@@ -37,6 +37,7 @@ export default {
   methods: {
     setOnMobile() {
       let width = window.innerWidth;
+      // TODO: Set proper breakpoint
       if (width < 500) this.onMobile = true;
       else this.onMobile = false;
     },

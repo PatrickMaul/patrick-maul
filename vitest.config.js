@@ -13,6 +13,7 @@ export default defineConfig({
       exclude: [
         ...configDefaults.exclude,
         "**/*.vue?vue&type=template&lang.js",
+        "**/*.vue?vue&type=template&scoped=*&lang.js",
         "src/main.js",
         "**/*/__tests__/",
         "src/router/",

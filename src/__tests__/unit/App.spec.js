@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach } from "vitest";
-
 import { shallowMount } from "@vue/test-utils";
 import App from "@/App.vue";
 
@@ -10,6 +9,8 @@ describe("App", () => {
       global: {
         stubs: {
           "router-view": true,
+          ApplicationBar: true,
+          Footer: true,
         },
       },
     });
