@@ -1,6 +1,6 @@
 <template lang="pug">
-.burger-menu(v-if="show", @click="$emit('toggleMenu')")
-  span.material-symbols-outlined menu
+.mobile-menu-button(v-if="show", @click="$emit('toggleMenu')")
+  span.material-symbols-outlined {{activeMenu ? 'close': 'menu' }}
 .filler(v-if="show")
 </template>
 
@@ -9,12 +9,13 @@ export default {
   name: "MobileMenuButton",
   props: {
     show: Boolean,
+    activeMenu: Boolean,
   },
 };
 </script>
 
 <style lang="sass" scoped>
-.burger-menu
+.mobile-menu-button
   margin: 0 8px 0 0
   display: flex
 

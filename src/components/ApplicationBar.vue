@@ -1,37 +1,31 @@
 <template lang="pug">
-#application-bar
+#application-bar.container
   .static-content
-    MobileMenuButton(:show="onMobile", @toggle-menu="true")
+    MobileMenuButton(:show="onMobile", :active-menu="activeMenu", @toggle-menu="$emit('toggleMenu')")
     span#brand-name Patrick Maul
     
   .extended-content(v-if="!onMobile")
     ul.nav-links
       li.nav-item(v-for="link in navLinks")
-        router-link.link(:to="link.to") {{ link.label }}
+        router-link.nav-link(:to="link.to") {{ link.label }}
         hr.underline
 </template>
 
 <script>
-import MobileMenuButton from "./MobileMenuButton.vue";
+import MobileMenuButton from "./mobile/MobileMenuButton.vue";
 
 export default {
   name: "ApplicationBar",
+  props: {
+    navLinks: Array,
+    activeMenu: Boolean,
+  },
   components: {
     MobileMenuButton,
   },
   data() {
     return {
       onMobile: false,
-      navLinks: [
-        {
-          label: "Home",
-          to: "/",
-        },
-        {
-          label: "Projects",
-          to: "/projects",
-        },
-      ],
     };
   },
   methods: {
@@ -51,7 +45,6 @@ export default {
 
 <style lang="sass" scoped>
 #application-bar
-  padding: 8px 16px
   width: 100%
 
   position: sticky
@@ -89,12 +82,6 @@ export default {
       list-style-type: none
 
       li.nav-item
-        .link
-          position: relative
-
-          color: inherit
-          text-decoration: none
-          text-transform: uppercase
 
         hr.underline
           margin: 0
