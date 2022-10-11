@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 
 import { shallowMount } from "@vue/test-utils";
-import App from "../App.vue";
+import App from "@/App.vue";
 
 describe("App", () => {
   let wrapper;
@@ -15,7 +15,7 @@ describe("App", () => {
     });
   });
 
-  it("renders properly", () => {
+  it("Should render with router-view", () => {
     expect(wrapper.find("router-view-stub").exists()).toBeTruthy();
   });
 });

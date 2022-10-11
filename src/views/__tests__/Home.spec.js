@@ -1,21 +1,16 @@
 import { describe, it, expect, beforeEach } from "vitest";
 
 import { shallowMount } from "@vue/test-utils";
-import Home from "../Home.vue";
+import Home from "@/views/Home.vue";
 
 describe("Home", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallowMount(Home, {
-      global: {
-        stubs: {
-          "router-view": true,
-        },
-      },
-    });
+    wrapper = shallowMount(Home);
   });
 
-  it("renders properly", () => {
-    expect(wrapper.text()).toBe("HOME");
+  it("Should render ...", () => {
+    wrapper.html(); // Delete this row
+    expect(true).toBeTruthy();
   });
 });

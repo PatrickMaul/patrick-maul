@@ -1,4 +1,7 @@
 # patrick-maul
+## Status
+## Tests
+![example workflow](https://github.com/patrickmaul/patrick-maul/actions/workflows/webpack.yml/badge.svg)
 
 This template should help get you started developing with Vue 3 in Vite.
 
