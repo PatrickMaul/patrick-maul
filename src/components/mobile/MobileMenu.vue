@@ -18,11 +18,6 @@ export default {
       else return "";
     },
   },
-  data() {
-    return {
-      //
-    };
-  },
 };
 </script>
 
@@ -44,33 +39,12 @@ export default {
   overflow: hidden
 
   position: absolute
-  // top: 0
 
-  background: #111111
+  background: $app-bg
 
   &.active
     animation: openMenu 0.3s
     animation-fill-mode: forwards
-
-  .toolbar
-    min-height: 64px
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    align-items: center
-
-  .filler
-    flex: 1
-
-  span#brand-name
-    font-size: 1.6rem
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
-
-    .close-button
-      span.material-symbols-outlined
-        font-size: 36px
 
   .nav-links
     display: flex

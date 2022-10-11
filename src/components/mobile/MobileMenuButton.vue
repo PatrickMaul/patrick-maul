@@ -22,6 +22,4 @@ export default {
   cursor: pointer
   span.material-symbols-outlined
     font-size: 36px
-.filler
-  flex: 1
 </style>
