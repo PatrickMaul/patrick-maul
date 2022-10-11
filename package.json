@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "pinia": "^2.0.21",
+    "rouf": "file:../Web/UI Framework/rouf",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
+    "@pinia/testing": "^0.0.14",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitest/coverage-c8": "^0.23.2",
