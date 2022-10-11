@@ -35,27 +35,12 @@ export default {
 </script>
 
 <style lang="sass">
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined')
-
 *
   box-sizing: border-box
-  font-family: 'Roboto', sans-serif
-  color: #EEEEEE
+  font-family: $app-font
+  color: $app-color
 
 body
   margin: 0
-
-  background-color: #111111
-
-.container
-  padding: 8px 16px
-
-
-.nav-link
-  position: relative
-
-  color: inherit
-  text-decoration: none
-  text-transform: uppercase
+  background-color: $app-bg
 </style>

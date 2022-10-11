@@ -1,11 +1,11 @@
 <template lang="pug">
 #application-bar.container
-  .static-content
+  .static-content.flex-row-centered
     MobileMenuButton(:show="onMobile", :active-menu="activeMenu", @toggle-menu="$emit('toggleMenu')")
     span#brand-name Patrick Maul
     
   .extended-content(v-if="!onMobile")
-    ul.nav-links
+    ul.nav-links.flex-row-centered
       li.nav-item(v-for="link in navLinks")
         router-link.nav-link(:to="link.to") {{ link.label }}
         hr.underline
@@ -51,32 +51,18 @@ export default {
   top: 0
 
   backdrop-filter: blur(5px)
-
-  span#brand-name
-    font-size: 1.6rem
-
   .static-content
     width: 100%
     min-height: 48px
 
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    align-items: center
-
   .extended-content
-    margin-top: 8px
-    margin-bottom: 8px
+    margin: 8px 0
     width: 100%
 
     ul.nav-links
       padding: 0
       margin: 0
 
-      display: flex
-      flex-direction: row
-      flex-wrap: nowrap
-      align-items: center
       gap: 16px
 
       list-style-type: none
